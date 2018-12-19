@@ -109,3 +109,7 @@ venv.bak/
 
 #Database
 *.sqlite3
+
+RSA/settings.py
+RSA/static/
+*.json
