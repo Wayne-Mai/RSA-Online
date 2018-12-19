@@ -165,8 +165,10 @@ def contact_gen_key(request):
         else:
             frst = int(frst)
             scnd = int(scnd)
-            if not(is_prime(frst) and is_prime(scnd)):
-                error = 'Both numbers must be simple'
+            if not(is_prime(frst)) or not(is_prime(scnd)):
+                error = 'Both numbers must be prime.'
+            if frst==scnd:
+                error='This two number cannot be equal.'
             if (frst < 200) or (scnd < 200):
                 error = 'Both numbers must be more than 200'
         if scnd == '':
