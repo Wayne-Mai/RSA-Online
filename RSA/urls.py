@@ -16,18 +16,21 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.http import HttpResponse
+from django.conf import settings
+from django.conf.urls.static import static
 
 import project.views
 
-
 urlpatterns = [
+
+    url(r'^admin/', admin.site.urls),
     url(r'^$', project.views.home),
     url(r'^hello', project.views.contact_gen_key),
     url(r'^genkey', project.views.contact_gen_key),
     url(r'^encoder', project.views.encode_contact),
     url(r'^decoder', project.views.decode_contact),
-
-
     #pictures
 
     ]
+
+urlpatterns=static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)+urlpatterns
