@@ -113,3 +113,8 @@ venv.bak/
 RSA/settings.py
 RSA/static/
 *.json
+
+
+# my config
+**/.vscode/**
+report/
