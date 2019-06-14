@@ -110,6 +110,7 @@ venv.bak/
 #Database
 *.sqlite3
 
+# As static files are collected into static folder, including /admin, it should not be public
 RSA/settings.py
 RSA/static/
 *.json
