@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+
+{% load static %}
+
 <html>
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href='img/style.css'>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 
 <body>
@@ -11,7 +14,7 @@
 <div id="begin">
     <div class="title_img">
         {% load static %}
-<img src="static/logo.jpg"  alt="SYSU" class="head_img">
+<img src="{% static 'img/logo.jpg' %}"  alt="SYSU" class="head_img">
 
 
     </div>
