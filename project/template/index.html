@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href='img/style.css'>
+</head>
+
+<body>
+
+<div id="begin">
+    <div class="title_img">
+        {% load static %}
+<img src="static/logo.jpg"  alt="SYSU" class="head_img">
+
+
+    </div>
+    <div class="web_title">RSA Cryptosystem</div>
+</div>
+
+
+<div class="unit" id="first_unit">
+
+    <h2>Key Generator</h2>
+
+    <div class="left_input">
+        <form class="form" accept-charset="UTF-8" action="/genkey" method="post">
+            <a class="debug-text">{{ key_error }}</a>
+            <textarea class="area" rows="4" placeholder="Prime p. Leave empty to auto generate." name="first_num">{{ first_num }}</textarea>
+            <textarea class="area" rows="4" placeholder="Prime q. Leave empty to auto generate." name="second_num">{{ second_num }}</textarea>
+            <button class="button">Submit</button>
+            {% csrf_token %}
+        </form>
+    </div>
+
+
+    <div class="right_output">
+         <div class="header">Public key</div>
+         <div class="output_num">{{ open }}</div>
+         <div class="header">Private key</div>
+         <div class="output_num">{{ closed }}</div>
+    </div>
+
+</div>
+
+
+<div class="unit">
+    <h2>Encoder</h2>
+
+    <div class="left_input">
+        <form class="form"  accept-charset="UTF-8" action="/encoder" method="post">
+            <a href="" class="debug-text">{{ encode_error }}</a>
+            <textarea class="area" rows="4" placeholder="Public key" name="encode_key">{{first_close}}{{ second_close }}</textarea>
+            <textarea class="area" rows="4" placeholder="Text" name="to_encode_text">{{ to_encode_text }}</textarea>
+
+
+            <button class="button">Submit</button>
+
+
+            {% csrf_token %}
+        </form>
+    </div>
+
+
+    <div class="right_output">
+        <div class="header" >Encoded text</div>
+        <div class="output_text">{{ encode_text }}</div>
+    </div>
+</div>
+
+
+<div class="unit">
+    <h2>Decoder</h2>
+
+    <div class="left_input">
+        <form class="form"  accept-charset="UTF-8" action="/decoder" method="post" >
+
+
+            <a href="" class="debug-text">{{ decode_error }}</a>
+            <textarea class="area" rows="4" placeholder="Private key" name="decode_key">{{first_open}}{{ second_open }}</textarea>
+            <textarea class="area" rows="4" placeholder="Code" name="to_decode_text">{{ to_decode_text }}</textarea>
+
+
+            <button class="button">Submit</button>
+
+
+            {% csrf_token %}
+        </form>
+    </div>
+
+
+    <div class="right_output">
+        <div class="header">Decoded text</div>
+        <div class="output_text">{{ decode_text }}</div>
+    </div>
+</div>
+
+
+<div id="end">
+    <div class="foot_note">
+        COPYRIGHT © All rights reserved - WAYNE MAI
+    </div>
+    <div class="foot_note">
+        Address : No. 135, Xingang Xi Road, Guangzhou, 510275, P. R. China
+    </div>
+    <div class="foot_note">
+        Email : maijj6@mail2.sysu.edu.cn
+    </div>
+    <div class="foot_note">
+        Author : 16337179 麦金杰
+    </div>
+</div>
+
+
+</body>
+
+</html>

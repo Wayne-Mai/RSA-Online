@@ -1,0 +1,250 @@
+body {
+    font-family: 'Khula', sans-serif;
+    margin: 0px;
+}
+
+/* generate key */
+
+/*encoder*/
+
+.area:hover {
+    border: 2px solid rgb(10, 160, 255);
+}
+
+/*decoder*/
+.area::-webkit-input-placeholder {
+    font-family: 'Khula', sans-serif;
+}
+
+
+.area {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 8px 10px;
+    outline: none;
+    border: 2px solid rgb(105, 105, 105);
+    border-radius: 0;
+    background: #fff;
+    font-family: 'Khula', sans-serif;
+    font-size: 18px;
+    color: #404040;
+    margin-top: 20px;
+    appearance: normal;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    transition: border-color 0.3s;
+    -o-transition: border-color 0.3s;
+    -ms-transition: border-color 0.3s;
+    -moz-transition: border-color 0.3s;
+    -webkit-transition: border-color 0.3s;
+    transition: border 1s;
+
+    resize: none;
+}
+
+.area:hover {
+    border: 2px solid rgb(10, 160, 255);
+}
+
+   .area::-webkit-input-placeholder {
+    font-family: 'Khula', sans-serif;
+}
+
+/*redo*/
+
+.unit {
+    border: 2px solid rgb(5, 71, 25);
+    height: 640px;
+    width: 95%;
+    max-width: 1000px;
+    margin: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 2px 7px #292929;
+    -moz-box-shadow: 0px 2px 7px #292929;
+    -webkit-box-shadow: 0px 2px 7px #292929;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+
+}
+
+
+.unit h2 {
+    padding: 10px;
+    margin: 0px;
+    color: white;
+    height: 30px;
+    border-bottom: 1px solid rgb(0, 88, 37);
+    background-color: rgb(0, 88, 37);
+
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.unit .left_input {
+
+    width: 38%;
+    height: 150px;
+    font-size: 20px;
+    margin: 20px;
+    float: left;
+}
+
+.unit .right_output {
+
+    margin: 40px;
+    width: 38%;
+    height: 150px;
+    font-size: 20px;
+    float: right;
+}
+
+.button {
+    height: 39px;
+    width: 200px;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    margin-left: 80px;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    opacity: 0.7;
+    background-color: rgb(0, 88, 37);
+    font: 300 13px/39px 'Open Sans', Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.button:hover {
+    background-color: limegreen;
+}
+
+.debug-text {
+    text-decoration: none;
+    font-size: 30px;
+    margin: auto;
+    color: rgb(255, 0, 0);
+}
+
+.header{
+    text-align: center;
+    font-family: 'Khula', sans-serif;
+    width: 300px;
+    height: 18px;
+    font-size: 18px;
+    padding: 5px;
+    display: block;
+    cursor: pointer;
+    border: 2px solid rgb(105, 105, 105);
+    border-radius: 0;
+    background: white;
+    transition: border 1s;
+    color: black;
+    resize: none;
+}
+.output_num {
+    text-align: center;
+    font-family: 'Khula', sans-serif;
+    width: 300px;
+    height: 200px;
+    font-size: 18px;
+    padding: 5px;
+    display: block;
+    word-break:break-all;
+    cursor: pointer;
+    border: 2px solid rgb(105, 105, 105);
+    border-radius: 0;
+    background: white;
+    transition: border 1s;
+    color: black;
+    resize: none;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.output_text{
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    padding: 5px;
+    display: block;
+
+
+    border: 2px solid rgb(105, 105, 105);
+    border-radius: 0;
+
+    background: #fff;
+    font-family: 'Khula', sans-serif;
+    font-size: 18px;
+    color: #404040;
+
+    overflow: scroll;
+
+}
+
+.head_img{
+    display: block;
+
+    background: rgb(0,88,37);
+    margin-bottom: 10px;
+}
+
+#begin{
+    background: rgb(0,88,37);
+    display: block;
+    width: 100%;
+    margin: 0;
+
+    margin-bottom: 100px;
+
+    height: 110px;
+}
+
+.web_title{
+    padding-top: 10px;
+    font-size: 60px;
+    color: white;
+    float:left;
+    display: inline;
+    margin-left: 20%;
+    font-family: 'Charm', cursive;
+
+}
+
+.title_img{
+    display: inline;
+    margin:0;
+    float: left;
+
+}
+
+#end{
+
+    background: rgb(0,88,37);
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-top: 150px;
+    height: 94px;
+    text-align: center;
+}
+.foot_note{
+    padding: 3px;
+    color: rgb(153,179,122);
+    font-size: 15px;
+    display: block;
+}

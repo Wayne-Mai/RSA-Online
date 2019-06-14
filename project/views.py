@@ -137,7 +137,7 @@ def genkey(p, q):
 
 def home(request):
     res = get_session_cache(request)
-    return render(request, 'index.html', res)
+    return render(request, 'template/index.html', res)
 
 
 def encode(e, n, text):
@@ -239,7 +239,7 @@ def contact_gen_key(request):
     res = get_session_cache(request)
     if error:
         res['key_error'] = error
-    return render(request, 'index.html', res)
+    return render(request, 'template/index.html', res)
 
 
 def encode_contact(request):
@@ -284,7 +284,7 @@ def encode_contact(request):
     if error:
         res['encode_error'] = error
 
-    return render(request, 'index.html', res)
+    return render(request, 'template/index.html', res)
 
 
 def decode_contact(request):
@@ -334,7 +334,7 @@ def decode_contact(request):
     if error:
         res['decode_error'] = error
 
-    return render(request, 'index.html', res)
+    return render(request, 'template/index.html', res)
 
 
 
