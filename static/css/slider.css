@@ -1,0 +1,51 @@
+
+
+.slide {
+    width: 800px;
+    margin: 0 -2px;
+}
+
+#slides {
+    position: relative;
+    white-space: nowrap;
+    width: 3200px;
+    left: 0px;
+}
+
+#points {
+    position: absolute;
+    top: 270px;
+    right: 40px;
+    white-space: nowrap;
+}
+
+.point {
+    display: inline-block;
+    background: url(/static/img/navigator.png) no-repeat;
+    width: 12px;
+    height: 12px;
+    margin: 0px -2px;
+}
+
+.active {
+    background-position: 0px -24px;
+}
+
+.arrow {
+    position: absolute;
+    background: url(/static/img/arrows-30.png);
+    width: 32px;
+    height: 80px;
+    top: 150px;
+    display: none;
+}
+
+#arrowLeft {
+    left: 10px;
+    background-position: 0px 0px;
+}
+
+#arrowRight {
+    right: 10px;
+    background-position: 0px 80px;
+}
